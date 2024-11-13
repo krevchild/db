@@ -1,0 +1,7 @@
+gmial: kr.evchild@gmail.com
+pw : evchild1 
+복구 메일: kr1657.khd@gmail.com
+
+git: 
+id: krevchild
+pw: echild1
