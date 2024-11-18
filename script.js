@@ -22,3 +22,10 @@ function submitPassword() {
     alert("Incorrect password. Try again.");
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingOverlay = document.querySelector(".loading-overlay");
+  setTimeout(() => {
+    loadingOverlay.style.display = "none"; // 로딩 오버레이 완전히 제거
+  }, 500); // 0.5초 후 제거
+});
