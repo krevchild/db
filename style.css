@@ -50,17 +50,17 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   background: rgba(0, 0, 0, 0.8); /* 반투명 검정 배경 */
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0 0 10px 0;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* 입력 창과 버튼 컨테이너 */
@@ -68,19 +68,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* 입력 창과 버튼 사이 간격 */
-  margin-top: 20px;
+  gap: 5px; /* 입력 창과 버튼 사이 간격 */
+  margin-top: 5px;
 }
 
 /* 비밀번호 입력 창 */
 .password-input {
-  padding: 10px 15px;
+  padding: 7px 10px;
   font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 250px;
+  width: 200px;
   outline: none;
   transition: border-color 0.3s;
 }
