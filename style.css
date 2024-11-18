@@ -1,0 +1,94 @@
+/* 기본 설정: 화면 크기와 여백 제거 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+/* 비디오 배경 추가 */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 비디오를 화면 비율에 맞게 조정 */
+  z-index: -1; /* 콘텐츠 뒤로 이동 */
+  opacity: 0.5; /* 비디오 불투명도 설정 */
+  mix-blend-mode: lighten; /* 이미지와 동영상 혼합 */
+}
+/* 배경 이미지 설정 */
+body {
+  background-image: url("assets/bg2.jpg"); /* WebP 이미지 경로 */
+  background-size: cover; /* 화면에 꽉 채우기 */
+  background-position: center; /* 중앙 정렬 */
+  background-repeat: no-repeat; /* 반복 방지 */
+}
+
+/* 중앙 콘텐츠 스타일 */
+.content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* 반투명 검정 배경 */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* 입력 창과 버튼 컨테이너 */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* 입력 창과 버튼 사이 간격 */
+  margin-top: 20px;
+}
+
+/* 비밀번호 입력 창 */
+.password-input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.password-input:focus {
+  border-color: rgba(255, 255, 255, 1); /* 포커스 시 강조 */
+}
+
+/* 버튼 스타일: 어두운 느낌 */
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 연한 흰색 테두리 */
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.submit-button:hover {
+  background: rgba(30, 30, 30, 0.9); /* 살짝 밝은 어두운 배경 */
+  border-color: rgba(255, 255, 255, 0.6); /* 테두리 강조 */
+}
