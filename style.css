@@ -9,18 +9,29 @@ html {
   font-family: Arial, sans-serif;
   color: white;
 }
-/* 비디오 배경 추가 */
-.background-video {
+/* Vimeo 비디오 배경 */
+.video-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 비디오를 화면 비율에 맞게 조정 */
-  z-index: -1; /* 콘텐츠 뒤로 이동 */
   opacity: 0.5; /* 비디오 불투명도 설정 */
-  mix-blend-mode: lighten; /* 이미지와 동영상 혼합 */
+  z-index: -1; /* 콘텐츠 뒤로 이동 */
 }
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 130%; /* 가로 기준으로 항상 화면을 채움 */
+  min-height: 130%; /* 세로 기준으로 항상 화면을 채움 */
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* 비디오 클릭 방지 */
+}
+
 /* 배경 이미지 설정 */
 body {
   background-image: url("assets/bg2.jpg"); /* WebP 이미지 경로 */
