@@ -216,6 +216,8 @@ body#success-page .background-video {
   max-width: 90%;
   text-align: center;
   backdrop-filter: blur(10px); /* 블러 효과로 더 부드럽게 */
+  overflow-x: auto; /* 가로 스크롤 활성화 */
+  -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 */
 }
 
 /* 아이들 글씨체 적용 */
