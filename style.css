@@ -55,7 +55,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 0 10px 0;
 }
 
@@ -219,6 +219,8 @@ body#success-page .background-video {
   text-align: center;
   backdrop-filter: blur(10px); /* 블러 효과로 더 부드럽게 */
   overflow-x: auto; /* 가로 스크롤 활성화 */
+  overflow-y: auto; /* 콘텐츠가 넘칠 때만 세로 스크롤 표시 */
+
   -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 */
 }
 
@@ -268,6 +270,26 @@ body#success-page .background-video {
 #success-page tr:hover td {
   background: #ece8e1; /* 밝은 회색으로 하이라이트 */
   transition: background 0.3s ease;
+}
+
+/* 모바일 전용 스타일 */
+@media screen and (max-width: 768px) {
+  /* 테이블 크기 줄이기 */
+  #success-page table {
+    font-size: 0.8rem; /* 글씨 크기 축소 */
+  }
+
+  /* 입력 필드 및 버튼 크기 조정 */
+  #success-page .button-container {
+    flex-wrap: wrap; /* 버튼과 입력 필드 줄바꿈 허용 */
+    gap: 10px; /* 간격 추가 */
+  }
+
+  #success-page .search-input,
+  .button {
+    font-size: 0.9rem; /* 버튼과 입력 필드 글씨 크기 축소 */
+    padding: 8px; /* 버튼과 입력 필드 간격 축소 */
+  }
 }
 
 /* 둥근 모서리 스타일 */
