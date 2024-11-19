@@ -105,6 +105,17 @@ p {
   background: rgba(30, 30, 30, 0.9); /* 살짝 밝은 어두운 배경 */
   border-color: rgba(255, 255, 255, 0.6); /* 테두리 강조 */
 }
+/* body에 흰색 배경과 초기 투명도 설정 */
+/* fade-in 효과 */
+body {
+  background-color: white;
+  opacity: 0; /* 초기 상태: 투명 */
+  transition: opacity 1s ease-in-out; /* 1초 동안 천천히 불투명해짐 */
+}
+
+body.fade-in {
+  opacity: 1; /* 불투명 상태 */
+}
 
 /* 페이드아웃 애니메이션 */
 @keyframes fadeOut {
@@ -115,4 +126,306 @@ p {
     opacity: 0;
     display: none; /* 애니메이션 완료 후 요소 제거 */
   }
+}
+
+/* 화면 밝아지는 효과 */
+@keyframes brighten {
+  0% {
+    background: radial-gradient(
+      circle,
+      white 0%,
+      rgba(0, 0, 0, 0.8) 40%,
+      rgba(0, 0, 0, 0) 90%
+    );
+  }
+  100% {
+    background: white;
+  }
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Success 페이지 영상 */
+
+body#success-page #intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+body#success-page #loop-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  display: none;
+}
+
+/* Success 페이지 배경 */
+body#success-page {
+  background-image: url("assets/childbg1.png");
+}
+
+body#success-page .video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.5; /* 비디오 불투명도 설정 */
+}
+
+body#success-page .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* 콘텐츠 뒤로 이동 */
+  opacity: 0.5; /* 비디오 불투명도 설정 */
+  mix-blend-mode: lighten; /* 이미지와 동영상 혼합 */
+}
+
+/* Success 페이지 테이블 컨테이너 */
+#success-page .table-container {
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 영어 + 한글 귀여운 글씨체 */
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(77, 77, 77, 0.7); /* 밝은 흰색 반투명 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+  max-width: 90%;
+  text-align: center;
+  backdrop-filter: blur(10px); /* 블러 효과로 더 부드럽게 */
+}
+
+/* 아이들 글씨체 적용 */
+#success-page {
+  font-family: "Caveat", "Comic Sans MS", cursive;
+}
+
+/* Success 페이지 테이블 스타일 */
+#success-page table {
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 영어 + 한글 귀여운 글씨체 */
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.9); /* 약간의 투명도 있는 흰색 */
+  border: 1px solid #e0e0e0; /* 부드러운 테두리 */
+  border-radius: 10px;
+}
+
+/* 테이블 머리글 스타일 */
+#success-page th {
+  position: sticky;
+  background: #d7f3e3; /* 밝은 민트색 */
+  color: #4a4a4a; /* 다크 그레이 */
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #c1e7d6; /* 테두리 */
+}
+
+/* 테이블 데이터 셀 스타일 */
+#success-page td {
+  background: #fef8e6; /* 밝은 크림색 */
+  color: #4a4a4a; /* 다크 그레이 */
+  padding: 10px;
+  border-bottom: 1px solid #f1e9d5; /* 셀 사이의 구분선 */
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 셀 글씨체 */
+}
+
+/* 홀수 행 스타일 */
+#success-page tr:nth-child(odd) td {
+  background: #f7f2f0; /* 약간 어두운 파스텔톤 */
+}
+
+/* 테이블 호버 효과 */
+#success-page tr:hover td {
+  background: #ece8e1; /* 밝은 회색으로 하이라이트 */
+  transition: background 0.3s ease;
+}
+
+/* 둥근 모서리 스타일 */
+#success-page th:first-child,
+#success-page td:first-child {
+  border-top-left-radius: 10px;
+}
+
+#success-page th:last-child,
+#success-page td:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* 상단 버튼 컨테이너 */
+#success-page .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* 검색 입력 필드 */
+#success-page .search-input {
+  padding: 10px;
+  font-size: 24px; /* 폰트 크기 */
+  font-weight: bold; /* 볼드체 */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* 버튼 스타일 */
+#success-page .pagination-button {
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 셀 글씨체 */
+  font-size: 20px; /* 폰트 크기 */
+  font-weight: bold; /* 볼드체 */
+  color: rgba(0, 115, 230, 0.8); /* 기본 글씨 색 + 투명도 */
+  background: none; /* 배경 제거 */
+  border: none; /* 외곽 네모 제거 */
+  cursor: pointer;
+  transition: color 0.3s ease; /* 색상 전환 */
+  opacity: 0.8; /* 버튼 투명도 추가 */
+}
+
+/* 페이지네이션 컨테이너 */
+#success-page .pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px; /* 버튼 간격 */
+}
+
+/* 페이지네이션 버튼 */
+#success-page .pagination-button {
+  padding: 5px 10px;
+  background: #d7f3e3;
+  background: #ffffff;
+  background: #d7f3e3;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 3px;
+}
+
+#success-page .pagination-button.active {
+  color: rgba(0, 85, 0, 1); /* 진한 초록색 */
+  text-decoration: underline; /* 밑줄 추가 */
+  opacity: 1; /* 활성화된 버튼은 불투명 */
+}
+
+#success-page .pagination-button:hover {
+  color: rgba(34, 139, 34, 1); /* 호버 시 진한 초록색 */
+  opacity: 1; /* 호버 시 불투명 */
+}
+/* 기본 상태 버튼 색상 */
+#success-page .pagination-button:not(.active) {
+  color: rgba(74, 144, 226, 0.8); /* 비슷한 분위기의 색 + 투명도 */
+}
+
+/* 버튼 컨테이너 */
+#success-page .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* 버튼과 입력 필드 간격 */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 검색 입력 필드 */
+#success-page .search-input {
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 셀 글씨체 */
+  padding: 10px 15px;
+  border: 1px solid rgba(74, 144, 226, 0.5); /* 기본 테두리 색상 */
+  border-radius: 5px; /* 둥근 모서리 */
+  font-size: 24px;
+  color: #4a4a4a;
+  background: rgba(255, 255, 255, 0.8); /* 약간의 투명도 */
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+#success-page .search-input:focus {
+  border-color: rgba(74, 144, 226, 1); /* 포커스 시 테두리 강조 */
+  background: rgba(255, 255, 255, 1); /* 포커스 시 불투명 */
+}
+
+/* 버튼 스타일 */
+#success-page .button {
+  padding: 10px 20px;
+  font-size: 24px; /* 폰트 크기 */
+  background: rgba(215, 243, 227, 0.8); /* 기본 배경색 */
+  color: rgba(0, 0, 0, 0.8); /* 기본 글씨 색 */
+  border: 1px solid rgba(34, 139, 34, 0.5); /* 테두리 색 */
+  border-radius: 5px; /* 둥근 모서리 */
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  opacity: 1; /* 기본 투명도 */
+  font-family: "Caveat", "Nanum Pen Script", cursive; /* 셀 글씨체 */
+}
+
+#success-page .button:hover {
+  background: rgba(34, 139, 34, 0.2); /* 호버 시 배경색 변경 */
+  color: rgb(113, 252, 113); /* 호버 시 글씨색 강조 */
+  opacity: 0.8; /* 호버 시 불투명 */
+}
+
+#success-page .button:active {
+  background: rgba(34, 139, 34, 0.4); /* 클릭 시 배경 더 어두움 */
+  color: rgba(0, 85, 0, 1); /* 클릭 시 글씨색 진하게 */
+}
+
+#success-page .button:disabled {
+  background: rgba(200, 200, 200, 0.5); /* 비활성화 상태 배경 */
+  color: rgba(150, 150, 150, 0.8); /* 비활성화 상태 글씨 */
+  cursor: not-allowed; /* 비활성화 상태 커서 */
+}
+
+/* 메시지 박스 스타일 */
+#success-page .message-box {
+  display: inline-block;
+  min-width: 150px; /* 메시지 박스의 최소 너비 */
+  font-size: 20px; /* 폰트 크기 */
+  color: #333; /* 기본 글씨색 */
+  text-align: right;
+  margin-right: 10px; /* 입력 필드와의 간격 */
+  visibility: hidden; /* 초기 상태: 숨김 */
+  opacity: 0; /* 초기 상태: 투명 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+#success-page .message-box.show {
+  visibility: visible; /* 보이게 설정 */
+  opacity: 1; /* 투명도 제거 */
 }
