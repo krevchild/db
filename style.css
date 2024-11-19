@@ -8,6 +8,7 @@ html {
   overflow: hidden;
   font-family: Arial, sans-serif;
   color: white;
+  transition: opacity 0.5s ease-in-out; /* 페이드인 효과 */
 }
 /* 비디오 배경 추가 */
 .background-video {
@@ -69,7 +70,8 @@ p {
   align-items: center;
   gap: 10px; /* 입력 창과 버튼 사이 간격 */
   margin-top: 20px;
-  z-index: 10; /* 콘텐츠 위에 표시 */
+  z-index: 1000; /* 콘텐츠 위에 표시 */
+  position: relative; /* 위치를 컨텍스트 안에서 제어 */
 }
 
 /* 비밀번호 입력 창 */

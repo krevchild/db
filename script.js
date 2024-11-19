@@ -16,16 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 페이드인 효과
   document.body.style.opacity = 1;
 
-  // 비디오 요소 가져오기
-  // const introVideo = document.getElementById("intro-video");
-  const loopVideo = document.getElementById("loop-video");
-
-  // // 첫 번째 비디오가 끝나면 두 번째 비디오 시작
-  // introVideo.addEventListener("ended", () => {
-  //   introVideo.style.display = "none";
-  //   loopVideo.style.display = "block";
-  //   loopVideo.play();
-  // });
+  const passwordInput = document.getElementById("password");
+  passwordInput.focus(); // 입력 창에 포커스 설정
   const loadingOverlay = document.querySelector(".loading-overlay");
   setTimeout(() => {
     loadingOverlay.style.display = "none"; // 로딩 오버레이 완전히 제거
