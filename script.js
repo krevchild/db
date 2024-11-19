@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 페이드인 효과
   document.body.style.opacity = 1;
 
-  const passwordInput = document.getElementById("password");
-  passwordInput.focus(); // 입력 창에 포커스 설정
   const loadingOverlay = document.querySelector(".loading-overlay");
   setTimeout(() => {
     loadingOverlay.style.display = "none"; // 로딩 오버레이 완전히 제거

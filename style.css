@@ -82,7 +82,7 @@ p {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 250px;
+  width: 200px;
   outline: none;
   transition: border-color 0.3s;
 }
