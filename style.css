@@ -156,8 +156,30 @@ td {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Success 페이지 영상 */
+body#success-page /* 페이지 전체에 스크롤 가능하도록 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* 세로 스크롤 활성화 */
+  -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 */
+}
+/* 특정 섹션에 스크롤 설정 (필요한 경우) */
+body#success-page .scrollable-section {
+  max-height: 100vh; /* 최대 높이를 뷰포트에 맞춤 */
+  overflow-y: auto; /* 세로 스크롤 활성화 */
+  overflow-x: hidden; /* 가로 스크롤 제거 */
+  border-radius: 5px; /* 둥근 모서리 */
+}
+/* 스크롤바 스타일링 */
+body::-webkit-scrollbar,
+.scrollable-section::-webkit-scrollbar {
+  width: 6px; /* 스크롤바 너비 */
+  border-radius: 5px; /* 둥근 모서리 */
+}
 
+/* Success 페이지 영상 */
 body#success-page #intro-video {
   position: absolute;
   top: 0;
