@@ -1,6 +1,7 @@
 // 비밀번호 확인 함수
 function submitPassword() {
-  const password = document.getElementById("password").value;
+  // const password = document.getElementById("password").value;
+  const password = "1234";
   const correctPassword = "1234"; // 원하는 비밀번호 설정
 
   if (password === correctPassword) {
