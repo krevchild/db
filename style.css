@@ -239,6 +239,7 @@ body#success-page .background-video {
   background: rgba(255, 255, 255, 0.9); /* 약간의 투명도 있는 흰색 */
   border: 1px solid #e0e0e0; /* 부드러운 테두리 */
   border-radius: 10px;
+  border: none; /* 외곽 네모 제거 */
 }
 
 /* 테이블 머리글 스타일 */
@@ -250,6 +251,7 @@ body#success-page .background-video {
   padding: 12px;
   font-weight: bold;
   border-bottom: 2px solid #c1e7d6; /* 테두리 */
+  border: none; /* 외곽 네모 제거 */
 }
 
 /* 테이블 데이터 셀 스타일 */
@@ -270,26 +272,6 @@ body#success-page .background-video {
 #success-page tr:hover td {
   background: #ece8e1; /* 밝은 회색으로 하이라이트 */
   transition: background 0.3s ease;
-}
-
-/* 모바일 전용 스타일 */
-@media screen and (max-width: 768px) {
-  /* 테이블 크기 줄이기 */
-  #success-page table {
-    font-size: 0.8rem; /* 글씨 크기 축소 */
-  }
-
-  /* 입력 필드 및 버튼 크기 조정 */
-  #success-page .button-container {
-    flex-wrap: wrap; /* 버튼과 입력 필드 줄바꿈 허용 */
-    gap: 10px; /* 간격 추가 */
-  }
-
-  #success-page .search-input,
-  .button {
-    font-size: 0.9rem; /* 버튼과 입력 필드 글씨 크기 축소 */
-    padding: 8px; /* 버튼과 입력 필드 간격 축소 */
-  }
 }
 
 /* 둥근 모서리 스타일 */
@@ -443,4 +425,48 @@ body#success-page .background-video {
 #success-page .message-box.show {
   visibility: visible; /* 보이게 설정 */
   opacity: 1; /* 투명도 제거 */
+}
+
+/* 모바일 전용 스타일 */
+@media screen and (max-width: 768px) {
+  /* 테이블 크기 줄이기 */
+  #success-page table {
+    font-size: 0.8rem; /* 글씨 크기 축소 */
+    font-weight: 900;
+  }
+  #success-page .table-container {
+    max-height: 80vh; /* 모바일에서 최대 높이를 화면 높이의 80%로 제한 */
+    padding: 5px; /* 모바일에서는 패딩 축소 */
+    font-weight: 900;
+  }
+  /* 입력 필드 및 버튼 크기 조정 */
+  #success-page .button-container {
+    flex-wrap: wrap; /* 버튼과 입력 필드 줄바꿈 허용 */
+    gap: 10px; /* 간격 추가 */
+    font-weight: 900;
+  }
+
+  #success-page .search-input,
+  .button {
+    font-size: 0.9rem; /* 버튼과 입력 필드 글씨 크기 축소 */
+    padding: 8px; /* 버튼과 입력 필드 간격 축소 */
+  }
+
+  #success-page .search-input,
+  #success-page .button {
+    font-size: 0.8rem; /* 버튼과 입력 필드 글씨 크기 축소 */
+    padding: 8px; /* 버튼과 입력 필드 간격 축소 */
+  }
+  #success-page .button {
+    padding: 8px 18px;
+    font-size: 16px; /* 폰트 크기 */
+    background: rgba(215, 243, 227, 0.8); /* 기본 배경색 */
+    color: rgba(0, 0, 0, 0.8); /* 기본 글씨 색 */
+    border: 1px solid rgba(34, 139, 34, 0.5); /* 테두리 색 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    opacity: 1; /* 기본 투명도 */
+    font-family: "Caveat", "Nanum Pen Script", cursive; /* 셀 글씨체 */
+  }
 }
