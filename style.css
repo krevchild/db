@@ -21,7 +21,6 @@ html {
   opacity: 0.5; /* 비디오 불투명도 설정 */
   mix-blend-mode: lighten; /* 이미지와 동영상 혼합 */
 }
-
 /* 배경 이미지 설정 */
 body {
   background-image: url("assets/bg2.jpg"); /* WebP 이미지 경로 */
@@ -50,8 +49,8 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   background: rgba(0, 0, 0, 0.8); /* 반투명 검정 배경 */
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -68,19 +67,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px; /* 입력 창과 버튼 사이 간격 */
-  margin-top: 5px;
+  gap: 10px; /* 입력 창과 버튼 사이 간격 */
+  margin-top: 20px;
 }
 
 /* 비밀번호 입력 창 */
 .password-input {
-  padding: 7px 10px;
+  padding: 10px 15px;
   font-size: 16px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 200px;
+  width: 250px;
   outline: none;
   transition: border-color 0.3s;
 }
@@ -104,17 +103,6 @@ p {
 .submit-button:hover {
   background: rgba(30, 30, 30, 0.9); /* 살짝 밝은 어두운 배경 */
   border-color: rgba(255, 255, 255, 0.6); /* 테두리 강조 */
-}
-/* body에 흰색 배경과 초기 투명도 설정 */
-/* fade-in 효과 */
-body {
-  background-color: white;
-  opacity: 0; /* 초기 상태: 투명 */
-  transition: opacity 1s ease-in-out; /* 1초 동안 천천히 불투명해짐 */
-}
-
-body.fade-in {
-  opacity: 1; /* 불투명 상태 */
 }
 
 /* 페이드아웃 애니메이션 */

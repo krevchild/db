@@ -4,11 +4,8 @@ function submitPassword() {
   const correctPassword = "1234"; // 원하는 비밀번호 설정
 
   if (password === correctPassword) {
-    const body = document.body;
-
-    setTimeout(() => {
-      window.location.href = "success.html"; // 성공 페이지로 이동
-    }, 1000); // 애니메이션 1초 후 이동
+    // 페이지 이동 또는 다른 작업 수행
+    window.location.href = "success.html"; // 예: 성공 페이지로 이동
   } else {
     alert("Incorrect password. Try again.");
   }
@@ -28,4 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //   loopVideo.style.display = "block";
   //   loopVideo.play();
   // });
+  const loadingOverlay = document.querySelector(".loading-overlay");
+  setTimeout(() => {
+    loadingOverlay.style.display = "none"; // 로딩 오버레이 완전히 제거
+  }, 500); // 0.5초 후 제거
 });
